@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.main-nav{
+    height: 100px;
+    margin-top: -22px;
+    background-color: black;
+}
+.nav-tital h1{
+    padding-top: 13px;
+    color: aliceblue;
+    text-align: center;
+}
+.nav-btn{
+    margin-right: 30px;
+    margin-top: -5px;
+    float: right;
+}
+.nav-btn a{
+    text-decoration: none;
+}
+.nav-btn button{
+    background-color: rgb(184, 225, 234);
+    width: auto;
+    height: 30px;
+    font-size: 15px;
+}
+.nav-btn button:hover{
+    background-color: rgb(126, 202, 220);
+}
+/* transaction css */
+.transaction-form{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form-item label{
+    /* display:flex; */
+    /* text-align: start; */
+    line-height: 30px;
+}
+.form-item input{
+    align-content: flex-start;
+}
+
+.tra-table h2{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.c-bal{
+    float: right;
+    margin-right: 200px;
+    border: 1px solid black;
+    width: 250px;
+    height: 40px;
+}
+.c-bal p{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.das h1{
+    text-align: center;
+}
+
+.main-das{
+    display: flex;
+    justify-content: baseline;
+}
+.das1{
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 400px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 330px;
+}
+.sel-mo{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+.head-line span{
+
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 400px;
+}
+.date{
+text-align: end;
+margin-right: 18vw;
+}

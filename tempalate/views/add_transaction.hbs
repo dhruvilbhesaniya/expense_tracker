@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+</head>
+<body>
+    {{>nev}}
+
+    <div class="transaction-form">
+        <h2>Add Transaction</h2>
+
+        <form class="form-item" action="/add_transaction" method="post">
+             <label for="">Date</label> <input type="date" name="date" value=""><br>
+
+            <label for="">Amount</label> <input type="number" name="amount" value=""><br>
+
+            <label for="">Transaction Type</label>
+            <select name="TraType" id="">
+                <option value="credit">Credit</option>
+                <option value="debit">Debit</option>
+            </select><br>
+
+            <label for="">Message</label> <input type="text" name="message" value=""><br>
+
+            <label for="">A/c Type</label> 
+            <select name="acType" id="">
+                <option value="saving">Saving</option>
+                <option value="current">Current</option>
+            </select>
+
+            <div>
+                <button type="cancel" value="cancel">Cancel</button>
+                <button type="submit" value="submit">Save</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

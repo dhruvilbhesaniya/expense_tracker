@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    {{>nev}}
+    
+    <div class="tra-table">
+        <h2>Transaction</h2>   
+        <h5 class="date">date:{{date}}</h5>
+
+        <a href="/transaction?search=prevmonth">
+            <button style="margin-left: 180px;"><i class="fas fa-less-than"></i> Prev Month</button>
+        </a>
+        <a href="/transaction?search=nextmonth">
+            <button style="margin-left: 900px;">Next Month <i class="fas fa-greater-than"></i></button>
+        </a>
+         <table
+            class="table table-striped table-bordered table-hover table-checkable order-column valign-middle dataTable no-footer"
+            aria-describedby="example4_info"
+            style="width: 1230px; margin-left: 130px;border: 1px solid rgb(208, 198, 198); margin-top: 20px;"
+            id="tra-table">
+            <thead>
+                <tr>
+                    <th style="width: 150px;">Date</th>
+                    <th style="width: 180px;">Transaction message</th>
+                    <th style="width: 150px;">Transaction Type</th>
+                    <th style="width: 150px;">Amount</th>
+                    <th style="width: 150px;">Account Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#if tdata}}
+{{#each tdata}}
+                <tr>
+                    <td>{{this.date}}</td>
+                    <td>{{this.Message}}</td>
+                    <td>{{this.Transaction_Type}}</td>
+                    <td>{{this.Amount}}</td>
+                    <td>{{this.Account_Type}}</td>
+                </tr>
+                {{/each}}
+                {{else}}
+                 <tr>
+                    <td rowspan="3" colspan="5" align="center">There is no data available</td>
+                    
+                </tr>
+                {{/if}}
+
+                
+            </tbody>
+        </table>
+
+        <div class="c-bal">
+            <h5>Closing balance : {{total}} </h5>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
